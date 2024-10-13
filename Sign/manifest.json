@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Unisat Auto Sign",
+  "version": "1.0",
+  "description": "Automatically clicks the Sign button in Unisat wallet popup for minting on flur.gg.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://flur.gg/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://flur.gg/token/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      
+    }
+  }
+}
+
